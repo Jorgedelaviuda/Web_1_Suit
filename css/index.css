@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+h1 , h2 , h3 , h4 , h5 , h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+    display: block;
+}
+p a{
+    display: inline;
+}
+img , picture , video , iframe , svg {
+    display: block;
+    width: 100%;
+    height: initial;
+}
+svg{
+    fill: currentColor;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    font-size: 100%;
+
+    /* Color */
+    --color-primary: #ff0054;
+
+    /* Tipografías */
+    --font-primary : Helvetica, Arial;
+   
+    /* Espacios */
+    --margin-primary: 0 0 1rem;
+
+}
+
+body{
+    font-family: var(--font-primary) ;
+}
+
+
+/* Galería y Grid */
+.Grid{
+    width: 80%;
+    margin: 2rem auto;
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem
+}
+.Grid.img{
+
+}
+
+@media (max-width: 1440px){
+    .Grid{
+    grid-template-columns: repeat(3,1fr);
+}
+}
+
+@media (max-width: 720px){
+    .Grid{
+    grid-template-columns: repeat(2,1fr);
+}
+}
+@media (max-width: 375px){
+    .Grid{
+    grid-template-columns: repeat(1,1fr);
+}
+}
